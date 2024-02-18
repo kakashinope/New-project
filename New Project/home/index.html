@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Космос</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+            body {
+            font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f8f8f8;
+            background-color: #0e0e1a; /* Dark blue background like space */
+            color: #f0f0f0; /* Light text color */
         }
 
         nav {
-            background-color: #333;
-            color: #fff;
+            background-color: #08080f; /* Darker blue for navigation */
+            color: #f0f0f0;
             padding: 10px;
         }
 
@@ -30,7 +30,7 @@
 
         nav a {
             text-decoration: none;
-            color: #fff;
+            color: #f0f0f0; /* Light text color */
         }
 
         h1,
@@ -42,13 +42,13 @@
 
         section {
             padding: 20px;
-            background-color: #fff;
+            background-color: #16162b; /* Darker background for sections */
             border-radius: 8px;
             margin: 20px;
         }
 
         section h2 {
-            color: #333;
+            color: #f0f0f0;
         }
 
         section ul {
@@ -76,10 +76,10 @@
         form {
             max-width: 400px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: #16162b; /* Darker background for form */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
         }
 
         input,
@@ -88,19 +88,20 @@
             width: 100%;
             padding: 10px;
             box-sizing: border-box;
-            border: 1px solid #ccc;
+            border: 1px solid #53538f; /* Lighter border color */
             border-radius: 4px;
+            background-color: #0e0e1a; /* Darker background for inputs and button */
+            color: #f0f0f0;
         }
 
         button {
-            background-color: #333;
-            color: #fff;
+            background-color: #53538f; /* Lighter blue for button */
             cursor: pointer;
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #08080f; /* Darker background for footer */
+            color: #f0f0f0;
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -135,31 +136,5 @@
     <footer>
         <p>&copy; 2024 Космос Вебсайт. Усі права захищено.</p>
     </footer>
-
-    <!-- Script to handle navigation -->
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            var sections = document.querySelectorAll('section');
-            sections.forEach(function (section) {
-                section.style.display = 'none';
-            });
-            // Show the selected section
-            var selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
-        }
-
-        function submitForm(event) {
-            event.preventDefault(); // Prevent form submission
-            var emailInput = document.getElementById('emailInput').value;
-            // You can perform further validation here if needed
-            // For now, let's just display a confirmation message
-            document.getElementById('subscribeForm').reset(); // Clear the form
-            document.getElementById('confirmation').style.display = 'block'; // Show confirmation message
-        }
-    </script>
 </body>
-
 </html>

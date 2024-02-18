@@ -3,40 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Description</title>
+    <title>Комос</title>
     <style>
-        /* Ваші стилі для опису зображення */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
+            body {
+                font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
+                color: #f0f0f0; /* Light text color */
+                margin: 0;
+                padding: 0;
+                background-color: #0e0e1a; /* Dark blue background */
+            }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+            header {
+                color: #f0f0f0; /* Light text color */
+                padding: 10px;
+                text-align: center;
+                background-color: #08080f; /* Darker blue for header */
+            }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 20px;
-        }
+            nav {
+                background-color: #08080f; /* Darker blue for navigation */
+                color: #f0f0f0; /* Light text color */
+                padding: 10px;
+                text-align: center;
+            }
 
-        .description {
-            font-size: 18px;
-            color: #333;
-        }
+            nav a {
+                color: #f0f0f0; /* Light text color */
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #0066cc; /* Light blue for heading */
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            p {
+                color: #b0b0b0; /* Lighter text color */
+                clear: both; /* Added to clear the float and prevent wrapping issues */
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+
+            li {
+                clear: both; /* Added to clear the float and prevent wrapping issues */
+                margin-bottom: 20px;
+                padding: 20px;
+                background-color: #16162b; /* Darker background for content */
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                float: left; /* Added to move the images to the left */
+                max-width: 400px; /* Added width limit */
+            }
+
+            .description-input {
+                clear: both;
+                margin-top: 10px;
+            }
+
+            .description-input textarea {
+                width: calc(100% - 40px); /* Adjust width */
+                margin: 0 20px;
+                border-radius: 8px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                resize: vertical;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: #16162b; /* Darker background for container */
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+            }
+
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Image Description</h1>
-    <img src="{{ item[1] }}" alt="Image">
-    <div class="description">
-        <p>{{ item[3] }}</p>
+    <header>
+        <nav>
+            <a href="http://127.0.0.1:5000/gallery" onclick="showSection('facts.html')">Галерея</a>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="{{ item[1] }}" alt="Image">
+        <div class="description">
+            <p>{{ item[3] }}</p>
+        </div>
+        <div class="description-input">
+            <label for="image-description"></label><br>
+            <textarea id="image-description" rows="4" cols="50"></textarea>
+        </div>
     </div>
-</div>
 </body>
 </html>

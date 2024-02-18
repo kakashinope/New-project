@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Космос</title>
-    <link rel="stylesheet" href="шлях_або_URL_до_style.css">
-
     <!-- Мета-тег для опису сторінки -->
     <meta name="description" content="Сайт, що присвячений нашим авторам та їхній любові до космосу.">
-
     <!-- Мета-теги для соціальних мереж -->
     <meta property="og:title" content="Про нас">
     <meta property="og:description" content="Сайт, що присвячений нашим авторам та їхній любові до космосу.">
@@ -17,84 +14,89 @@
 
     <!-- Стилі -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            body {
+                font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background-color: #0e0e1a; /* Dark blue background like space */
+                color: #f0f0f0; /* Light text color */
+            }
 
-        nav {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-        }
+            nav {
+                background-color: #08080f; /* Darker blue for navigation */
+                color: #fff; /* Light text color */
+                padding: 10px;
+            }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-around;
+            }
 
-        nav a {
-            text-decoration: none;
-            color: #fff;
-        }
+            nav a {
+                text-decoration: none;
+                color: #fff; /* Light text color */
+            }
 
-        h1, p {
-            text-align: center;
-            margin: 20px 0;
-        }
+            h1, p {
+                text-align: center;
+                margin: 20px 0;
+            }
 
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 20px;
+            }
 
-        .gallery img {
-            width: 300px;
-            margin: 10px;
-            border-radius: 8px;
-        }
+            .gallery img {
+                width: 300px;
+                margin: 10px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+            }
 
-        .news {
-            text-align: center;
-            margin-top: 50px;
-        }
+            .news {
+                text-align: center;
+                margin-top: 50px;
+            }
 
-        .news h2 {
-            color: #333;
-        }
+            .news h2 {
+                color: #f0f0f0; /* Light text color */
+            }
 
-        .news p {
-            color: #555;
-        }
+            .news p {
+                color: #b0b0b0; /* Lighter text color */
+            }
 
-        .articles {
-            margin: 50px auto;
-            max-width: 800px;
-            text-align: left;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
+            .articles {
+                margin: 50px auto;
+                max-width: 800px;
+                text-align: left;
+                padding: 20px;
+                background-color: #16162b; /* Darker background for articles */
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+            }
 
-        .articles h2 {
-            color: #333;
-        }
+            .articles h2 {
+                color: #f0f0f0; /* Light text color */
+            }
 
-        .articles a {
-            color: #007bff;
-            text-decoration: none;
-        }
+            .articles a {
+                color: #007bff; /* Lighter blue for links */
+                text-decoration: none;
+            }
 
-        .articles a:hover {
-            text-decoration: underline;
-        }
+            .articles a:hover {
+                text-decoration: underline;
+            }
+
     </style>
 </head>
 <body>
@@ -103,7 +105,7 @@
             <ul>
                 <a href="http://127.0.0.1:5000/" onclick="showSection('index.html')">Головна</a>
                 <a href="http://127.0.0.1:5000/facts" onclick="showSection('facts')">Факти про Комос</a>
-                <a href="http://127.0.0.1:5000/gallery" onclick="showSection('facts.html')">Галерея</a>
+                <a href="http://127.0.0.1:5000/gallery" onclick="showSection('gallery.html')">Галерея</a>
                 <a href="http://127.0.0.1:5000/about" onclick="showSection('abou.html')">Про нас</a>
             </ul>
         </nav>
@@ -114,15 +116,6 @@
         <p>Інформація про авторів сайту та їхню любов до космосу.</p>
         <!-- Додайте більше інформації про авторів, можливо, фотографії та посилання на їх соціальні мережі -->
     </section>
-    <section class="news">
-        <h2>Новини</h2>
-        <div>
-            <p>Нова місія на Марс: вчені виявили потенційно обітований регіон для посадки.</p>
-            <p>Знайдено нову зорю в нашій галактиці, що може мати екзопланети.</p>
-            <!-- Додайте більше новин -->
-        </div>
-    </section>
-
     <section class="articles">
         <h2>Найцікавіші статті</h2>
         <div>

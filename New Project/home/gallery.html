@@ -6,207 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Космос</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/lightgallery/1.10.0/css/lightgallery.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lightgallery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-thumbnail.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-fullscreen.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-zoom.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-hash.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-share.min.js"></script>
     <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    background-color: #f4f4f4;
-                    color: #333;
-                    margin: 0;
-                    padding: 0;
-                }
-        
-                header {
-                    color: white;
-                    padding: 10px;
-                    text-align: center;
-                    background-color: #333;
-                }
-        
-                nav {
-                    background-color: #333;
-                    color: white;
-                    padding: 10px;
-                    text-align: center;
-                }
-        
-                nav a {
-                    color: white;
-                    text-decoration: none;
-                    margin: 0 10px;
-                }
-        
-                h1 {
-                    text-align: center;
-                    color: #333;
-                }
-        
-                ul {
-                    list-style-type: none;
-                    padding: 0;
-                    margin: 0;
-                }
-        
-                p {
-                    color: #555;
-                    clear: both; /* Added to clear the float and prevent wrapping issues */
-                }
-        
-                li {
-                    clear: both; /* Added to clear the float and prevent wrapping issues */
-                    margin-bottom: 20px;
-                    padding: 20px;
-                    background-color: #fff;
-                    border-radius: 8px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                }
-        
-                img {
-                    max-width: 100%;
-                    height: auto;
-                    display: block;
-                    margin: 20px auto;
-                    border-radius: 8px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    float: left; /* Added to move the images to the left */
-                    max-width: 250px; /* Додано обмеження ширини */
-                    
-                }
-                    .gallery {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                }
+            body {
+                font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
+                background-color: #0e0e1a; /* Dark blue background like space */
+                color: #f0f0f0; /* Light text color */
+                margin: 0;
+                padding: 0;
+            }
 
-                    .gallery img {
-                    width: 300px; /* Задайте розмір зображень за потребою */
-                    height: auto;
-                    margin: 10px;
-                    cursor: pointer;
-                }
+            header,
+            nav {
+                background-color: #08080f; /* Darker blue for header and navigation */
+                color: #f0f0f0; /* Light text color */
+                padding: 10px;
+                text-align: center;
+            }
 
-                .gallery img:hover {
-                transform: scale(1.1); /* Збільште розмір при наведенні курсору, якщо потрібно */
-                }
+            nav a {
+                color: #f0f0f0; /* Light text color */
+                text-decoration: none;
+                margin: 0 10px;
+            }
 
-                /* Додайте стилі для вашого галереї, якщо потрібно */
-                .gallery {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                }
+            h1 {
+                text-align: center;
+                color: #f0f0f0; /* Light text color */
+            }
 
-                /* Ваші стилі */
-                .gallery {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
 
-                .gallery img {
-                    width: 300px; /* Задайте розмір зображень за потребою */
-                    height: auto;
-                    margin: 10px;
-                    cursor: pointer;
-                }
+            p {
+                color: #b0b0b0; /* Lighter text color */
+                clear: both; 
+            }
 
-                .gallery img:hover {
-                    transform: scale(1.1); /* Збільште розмір при наведенні курсору, якщо потрібно */
-                }
+            li {
+                clear: both; 
+                margin-bottom: 20px;
+                padding: 20px;
+                background-color: #16162b; /* Darker background for content */
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+            }
 
-                .gallery .description {
-                    text-align: center;
-                    margin-top: 5px;
-                    color: #777;
-                }
-                .gallery {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    margin-top: 20px;
-                }
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                float: left;
+                max-width: 250px; /* Added width constraint */
+            }
 
-                .gallery a {
-                    margin: 10px;
-                    text-decoration: none;
-                    color: inherit;
-                }
-
-                .gallery img {
-                    width: 300px;
-                    height: auto;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    transition: transform 0.3s ease;
-                }
-
-                .gallery img:hover {
-                    transform: scale(1.1);
-                }
-
-                .gallery .description {
-                    text-align: center;
-                    margin-top: 5px;
-                    color: #777;
-                }
-
-        /* Оновлені стилі для навігаційного меню та заголовка */
-
-                header {
-                    background-color: #333;
-                    padding: 10px;
-                }
-
-                nav {
-                    background-color: #333;
-                    color: white;
-                    padding: 10px;
-                    text-align: center;
-                }
-
-                nav a {
-                    color: white;
-                    text-decoration: none;
-                    margin: 0 10px;
-                }
-
-                h1 {
-                    text-align: center;
-                    color: #333;
-                }
-
-                /* Загальні стилі */
-
-                body {
-                    font-family: Arial, sans-serif;
-                    background-color: #f4f4f4;
-                    color: #333;
-                    margin: 0;
-                    padding: 0;
-                }
-            /* Обгортка галереї */
             .gallery {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-top: 20px;
             }
-            /* Стилі для посилань та описів */
+
             .gallery a {
                 margin: 10px;
                 text-decoration: none;
                 color: inherit;
-                display: block; /* Зробимо блоки анкорів блочними для відображення опису під зображенням */
+                display: block;
             }
-            /* Стилі для зображень */
+
             .gallery img {
                 width: 300px;
                 height: auto;
@@ -214,16 +86,17 @@
                 cursor: pointer;
                 transition: transform 0.3s ease;
             }
-            /* Збільшення зображень при наведенні */
+
             .gallery img:hover {
                 transform: scale(1.1);
             }
-            /* Стилі для описів */
+
             .gallery .description {
                 text-align: center;
                 margin-top: 5px;
                 color: #777;
             }
+
     </style>
 </head>
 <body>
@@ -231,7 +104,7 @@
     <nav>
         <a href="http://127.0.0.1:5000/" onclick="showSection('index.html')">Головна</a>
         <a href="http://127.0.0.1:5000/facts" onclick="showSection('facts')">Факти про Комос</a>
-        <a href="http://127.0.0.1:5000/gallery" onclick="showSection('facts.html')">Галерея</a>
+        <a href="http://127.0.0.1:5000/gallery" onclick="showSection('gallery.html')">Галерея</a>
         <a href="http://127.0.0.1:5000/about" onclick="showSection('abou.html')">Про нас</a>
     </nav>
 </header>
@@ -244,26 +117,5 @@
     </a>
     {%endfor%}
 </div>
-
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lightgallery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-thumbnail.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-fullscreen.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-zoom.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-hash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-share.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.gallery').lightGallery({
-            thumbnail: true,
-            animateThumb: false,
-            showThumbByDefault: false,
-            download: false,
-            zoom: false,
-            fullScreen: false
-        });
-    });
-</script>
 </body>
 </html>
