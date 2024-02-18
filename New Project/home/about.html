@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космос</title>
+    <link rel="stylesheet" href="шлях_або_URL_до_style.css">
+
+    <!-- Мета-тег для опису сторінки -->
+    <meta name="description" content="Сайт, що присвячений нашим авторам та їхній любові до космосу.">
+
+    <!-- Мета-теги для соціальних мереж -->
+    <meta property="og:title" content="Про нас">
+    <meta property="og:description" content="Сайт, що присвячений нашим авторам та їхній любові до космосу.">
+    <meta property="og:image" content="посилання_на_зображення.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Стилі -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        h1, p {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        .news {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .news h2 {
+            color: #333;
+        }
+
+        .news p {
+            color: #555;
+        }
+
+        .articles {
+            margin: 50px auto;
+            max-width: 800px;
+            text-align: left;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .articles h2 {
+            color: #333;
+        }
+
+        .articles a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .articles a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="http://127.0.0.1:5000/" onclick="showSection('index.html')">Головна</a>
+                <a href="http://127.0.0.1:5000/facts" onclick="showSection('facts')">Факти про Комос</a>
+                <a href="http://127.0.0.1:5000/gallery" onclick="showSection('facts.html')">Галерея</a>
+                <a href="http://127.0.0.1:5000/about" onclick="showSection('abou.html')">Про нас</a>
+            </ul>
+        </nav>
+        <h1>Про нас</h1>
+    </header>
+
+    <section>
+        <p>Інформація про авторів сайту та їхню любов до космосу.</p>
+        <!-- Додайте більше інформації про авторів, можливо, фотографії та посилання на їх соціальні мережі -->
+    </section>
+    <section class="news">
+        <h2>Новини</h2>
+        <div>
+            <p>Нова місія на Марс: вчені виявили потенційно обітований регіон для посадки.</p>
+            <p>Знайдено нову зорю в нашій галактиці, що може мати екзопланети.</p>
+            <!-- Додайте більше новин -->
+        </div>
+    </section>
+
+    <section class="articles">
+        <h2>Найцікавіші статті</h2>
+        <div>
+            <p><a href="http://127.0.0.1:5000/facts">Чорна діра в центрі галактики?</a></p>
+            <p><a href="http://127.0.0.1:5000/facts">Різноманітність зіркових типів</a></p>
+            <p><a href="http://127.0.0.1:5000/facts">Виникнення чорних дір?</a></p>
+            <!-- Додайте більше статей та посилань -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ваша Компанія. Усі права захищені.</p>
+        <!-- Додайте футер із посиланнями, копірайтом та іншою інформацією -->
+    </footer>
+
+    <!-- Підключення ваших власних скриптів або скриптів, які покращують взаємодію з користувачем -->
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космос</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        h1,
+        h2,
+        p {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        section h2 {
+            color: #333;
+        }
+
+        section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        button {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <a href="http://127.0.0.1:5000/" onclick="showSection('index')">Головна</a>
+            <a href="http://127.0.0.1:5000/facts" onclick="showSection('facts')">Факти про Космос</a>
+            <a href="http://127.0.0.1:5000/gallery" onclick="showSection('gallery')">Галерея</a>
+            <a href="http://127.0.0.1:5000/about" onclick="showSection('about')">Про нас</a>
+        </ul>
+    </nav>
+    <h1>Ласкаво просимо на сайт про космос!</h1>
+    <p>Досліджуйте та дізнавайтеся цікаві факти про космічний простір. Від галактик до планет, від наукових відкрить до захоплюючих астрономічних явищ - усе тут!</p>
+
+    <section id="index">
+        <h2>Головна сторінка</h2>
+        <p>Це головна сторінка сайту про космос. Ви можете вибрати інші розділи зверху.</p>
+        <form id="subscribeForm" onsubmit="submitForm(event)">
+            <h2>Підписатися на новини</h2>
+            <input type="email" id="emailInput" placeholder="Введіть ваш email" required>
+            <button type="submit">Підписатися</button>
+        </form>
+        <p id="confirmation" style="display: none;">Дякуємо за підписку!</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Космос Вебсайт. Усі права захищено.</p>
+    </footer>
+
+    <!-- Script to handle navigation -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form submission
+            var emailInput = document.getElementById('emailInput').value;
+            // You can perform further validation here if needed
+            // For now, let's just display a confirmation message
+            document.getElementById('subscribeForm').reset(); // Clear the form
+            document.getElementById('confirmation').style.display = 'block'; // Show confirmation message
+        }
+    </script>
+</body>
+
+</html>

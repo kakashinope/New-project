@@ -1,0 +1,269 @@
+<!-- Галерея -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космос</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/lightgallery/1.10.0/css/lightgallery.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-fullscreen.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-hash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-share.min.js"></script>
+    <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    color: #333;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                header {
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                    background-color: #333;
+                }
+        
+                nav {
+                    background-color: #333;
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                }
+        
+                nav a {
+                    color: white;
+                    text-decoration: none;
+                    margin: 0 10px;
+                }
+        
+                h1 {
+                    text-align: center;
+                    color: #333;
+                }
+        
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                }
+        
+                p {
+                    color: #555;
+                    clear: both; /* Added to clear the float and prevent wrapping issues */
+                }
+        
+                li {
+                    clear: both; /* Added to clear the float and prevent wrapping issues */
+                    margin-bottom: 20px;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+        
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 20px auto;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    float: left; /* Added to move the images to the left */
+                    max-width: 250px; /* Додано обмеження ширини */
+                    
+                }
+                    .gallery {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+
+                    .gallery img {
+                    width: 300px; /* Задайте розмір зображень за потребою */
+                    height: auto;
+                    margin: 10px;
+                    cursor: pointer;
+                }
+
+                .gallery img:hover {
+                transform: scale(1.1); /* Збільште розмір при наведенні курсору, якщо потрібно */
+                }
+
+                /* Додайте стилі для вашого галереї, якщо потрібно */
+                .gallery {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+
+                /* Ваші стилі */
+                .gallery {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+
+                .gallery img {
+                    width: 300px; /* Задайте розмір зображень за потребою */
+                    height: auto;
+                    margin: 10px;
+                    cursor: pointer;
+                }
+
+                .gallery img:hover {
+                    transform: scale(1.1); /* Збільште розмір при наведенні курсору, якщо потрібно */
+                }
+
+                .gallery .description {
+                    text-align: center;
+                    margin-top: 5px;
+                    color: #777;
+                }
+                .gallery {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+
+                .gallery a {
+                    margin: 10px;
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                .gallery img {
+                    width: 300px;
+                    height: auto;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                }
+
+                .gallery img:hover {
+                    transform: scale(1.1);
+                }
+
+                .gallery .description {
+                    text-align: center;
+                    margin-top: 5px;
+                    color: #777;
+                }
+
+        /* Оновлені стилі для навігаційного меню та заголовка */
+
+                header {
+                    background-color: #333;
+                    padding: 10px;
+                }
+
+                nav {
+                    background-color: #333;
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                nav a {
+                    color: white;
+                    text-decoration: none;
+                    margin: 0 10px;
+                }
+
+                h1 {
+                    text-align: center;
+                    color: #333;
+                }
+
+                /* Загальні стилі */
+
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    color: #333;
+                    margin: 0;
+                    padding: 0;
+                }
+            /* Обгортка галереї */
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            /* Стилі для посилань та описів */
+            .gallery a {
+                margin: 10px;
+                text-decoration: none;
+                color: inherit;
+                display: block; /* Зробимо блоки анкорів блочними для відображення опису під зображенням */
+            }
+            /* Стилі для зображень */
+            .gallery img {
+                width: 300px;
+                height: auto;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+            /* Збільшення зображень при наведенні */
+            .gallery img:hover {
+                transform: scale(1.1);
+            }
+            /* Стилі для описів */
+            .gallery .description {
+                text-align: center;
+                margin-top: 5px;
+                color: #777;
+            }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="http://127.0.0.1:5000/" onclick="showSection('index.html')">Головна</a>
+        <a href="http://127.0.0.1:5000/facts" onclick="showSection('facts')">Факти про Комос</a>
+        <a href="http://127.0.0.1:5000/gallery" onclick="showSection('facts.html')">Галерея</a>
+        <a href="http://127.0.0.1:5000/about" onclick="showSection('abou.html')">Про нас</a>
+    </nav>
+</header>
+<h1>Галерея космосу</h1>
+<div class="gallery">
+    {%for item in images%}
+    <a href="/gallery/{{item[0]}}">
+        <img src="{{item[1]}}" alt="Космос 1">
+        <div class="description">{{item[2]}}</div>
+    </a>
+    {%endfor%}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-thumbnail.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-fullscreen.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-hash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lightgallery/1.10.0/js/lg-share.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.gallery').lightGallery({
+            thumbnail: true,
+            animateThumb: false,
+            showThumbByDefault: false,
+            download: false,
+            zoom: false,
+            fullScreen: false
+        });
+    });
+</script>
+</body>
+</html>
