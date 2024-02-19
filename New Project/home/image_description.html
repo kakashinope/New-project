@@ -5,37 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Комос</title>
     <style>
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
             body {
-                font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
-                color: #f0f0f0; /* Light text color */
+                font-family: 'Roboto', sans-serif;
+                color: #f0f0f0;
                 margin: 0;
                 padding: 0;
-                background-color: #0e0e1a; /* Dark blue background */
+                background-color: #0e0e1a;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для сторінки */
             }
 
             header {
-                color: #f0f0f0; /* Light text color */
                 padding: 10px;
                 text-align: center;
-                background-color: #08080f; /* Darker blue for header */
+                background-color: #08080f;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для заголовка */
             }
 
             nav {
-                background-color: #08080f; /* Darker blue for navigation */
-                color: #f0f0f0; /* Light text color */
                 padding: 10px;
                 text-align: center;
+                background-color: #08080f;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для навігації */
             }
 
             nav a {
-                color: #f0f0f0; /* Light text color */
+                color: #f0f0f0;
                 text-decoration: none;
                 margin: 0 10px;
             }
 
             h1 {
                 text-align: center;
-                color: #0066cc; /* Light blue for heading */
+                color: #0066cc;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для заголовка h1 */
             }
 
             ul {
@@ -45,19 +56,20 @@
             }
 
             p {
-                color: #b0b0b0; /* Lighter text color */
-                clear: both; /* Added to clear the float and prevent wrapping issues */
+                color: #b0b0b0;
+                clear: both;
                 line-height: 1.6;
                 margin-bottom: 15px;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для параграфів */
             }
 
             li {
-                clear: both; /* Added to clear the float and prevent wrapping issues */
+                clear: both;
                 margin-bottom: 20px;
                 padding: 20px;
-                background-color: #16162b; /* Darker background for content */
+                background-color: #16162b;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
             }
 
             img {
@@ -66,9 +78,10 @@
                 display: block;
                 margin: 20px auto;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
-                float: left; /* Added to move the images to the left */
-                max-width: 400px; /* Added width limit */
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+                float: left;
+                max-width: 400px;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для зображень */
             }
 
             .description-input {
@@ -77,7 +90,7 @@
             }
 
             .description-input textarea {
-                width: calc(100% - 40px); /* Adjust width */
+                width: calc(100% - 40px);
                 margin: 0 20px;
                 border-radius: 8px;
                 padding: 10px;
@@ -88,11 +101,13 @@
             .container {
                 max-width: 800px;
                 margin: 0 auto;
-                background-color: #16162b; /* Darker background for container */
+                background-color: #16162b;
                 padding: 20px;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для контейнера */
             }
+
 
     </style>
 </head>

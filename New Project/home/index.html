@@ -6,108 +6,135 @@
     <title>Космос</title>
     <style>
             body {
-            font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #0e0e1a; /* Dark blue background like space */
-            color: #f0f0f0; /* Light text color */
-        }
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                color: #f0f0f0;
+                background: linear-gradient(45deg, #000033, #000066, #000033, #000066);
+                background-size: 400% 400%;
+                animation: gradientAnimation 15s ease infinite;
+            }
 
-        nav {
-            background-color: #08080f; /* Darker blue for navigation */
-            color: #f0f0f0;
-            padding: 10px;
-        }
+            @keyframes gradientAnimation {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
+            nav {
+                background-color: #08080f;
+                color: #f0f0f0;
+                padding: 10px;
+            }
 
-        nav a {
-            text-decoration: none;
-            color: #f0f0f0; /* Light text color */
-        }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-around;
+            }
 
-        h1,
-        h2,
-        p {
-            text-align: center;
-            margin: 20px 0;
-        }
+            nav a {
+                text-decoration: none;
+                color: #f0f0f0;
+                transition: color 0.3s ease;
+            }
 
-        section {
-            padding: 20px;
-            background-color: #16162b; /* Darker background for sections */
-            border-radius: 8px;
-            margin: 20px;
-        }
+            nav a:hover {
+                color: #53538f;
+            }
 
-        section h2 {
-            color: #f0f0f0;
-        }
+            h1, h2, p {
+                text-align: center;
+                margin: 20px 0;
+                color: #f0f0f0; /* Змінимо колір тексту заголовків і параграфів */
+            }
 
-        section ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
+            section {
+                padding: 20px;
+                background-color: rgba(22, 22, 43, 0.8);
+                border-radius: 8px;
+                margin: 20px;
+                box-shadow: 0 0 20px rgba(240, 240, 240, 0.1); /* Додамо тінь для ефекту глибини */
+            }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 20px;
-        }
+            section h2 {
+                color: #f0f0f0;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Додамо тінь для заголовків */
+            }
 
-        .gallery img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease;
-        }
+            section ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
 
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-gap: 20px;
+            }
 
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #16162b; /* Darker background for form */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
-        }
+            .gallery img {
+                width: 100%;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                transition: transform 0.3s ease, border-radius 0.3s ease;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.3); /* Додамо тінь для зображень */
+            }
 
-        input,
-        button {
-            margin-bottom: 10px;
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 1px solid #53538f; /* Lighter border color */
-            border-radius: 4px;
-            background-color: #0e0e1a; /* Darker background for inputs and button */
-            color: #f0f0f0;
-        }
+            .gallery img:hover {
+                transform: scale(1.1);
+                border-radius: 12px;
+            }
 
-        button {
-            background-color: #53538f; /* Lighter blue for button */
-            cursor: pointer;
-        }
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+                background-color: rgba(22, 22, 43, 0.8);
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+            }
 
-        footer {
-            background-color: #08080f; /* Darker background for footer */
-            color: #f0f0f0;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+            input, button {
+                margin-bottom: 10px;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #53538f;
+                border-radius: 4px;
+                background-color: rgba(14, 14, 26, 0.9);
+                color: #f0f0f0;
+            }
+
+            button {
+                background-color: #53538f;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+            button:hover {
+                transform: scale(1.05);
+            }
+
+            footer {
+                background-color: #08080f;
+                color: #f0f0f0;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
     </style>
 </head>
 

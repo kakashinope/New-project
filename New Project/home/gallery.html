@@ -7,31 +7,46 @@
     <title>Космос</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <style>
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            h1,
+            h2,
+            p {
+                animation: fadeIn 0.5s ease-in-out; /* Додали анімацію для заголовків та параграфів */
+            }
+
             body {
-                font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
-                background-color: #0e0e1a; /* Dark blue background like space */
-                color: #f0f0f0; /* Light text color */
+                font-family: 'Roboto', sans-serif;
+                background-color: #0e0e1a;
+                color: #f0f0f0;
                 margin: 0;
                 padding: 0;
             }
 
             header,
             nav {
-                background-color: #08080f; /* Darker blue for header and navigation */
-                color: #f0f0f0; /* Light text color */
+                background-color: #08080f;
+                color: #f0f0f0;
                 padding: 10px;
                 text-align: center;
             }
 
             nav a {
-                color: #f0f0f0; /* Light text color */
+                color: #f0f0f0;
                 text-decoration: none;
                 margin: 0 10px;
             }
 
             h1 {
                 text-align: center;
-                color: #f0f0f0; /* Light text color */
+                color: #f0f0f0;
             }
 
             ul {
@@ -41,17 +56,17 @@
             }
 
             p {
-                color: #b0b0b0; /* Lighter text color */
-                clear: both; 
+                color: #b0b0b0;
+                clear: both;
             }
 
             li {
-                clear: both; 
+                clear: both;
                 margin-bottom: 20px;
                 padding: 20px;
-                background-color: #16162b; /* Darker background for content */
+                background-color: #16162b;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
             }
 
             img {
@@ -60,9 +75,9 @@
                 display: block;
                 margin: 20px auto;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
                 float: left;
-                max-width: 250px; /* Added width constraint */
+                max-width: 250px;
             }
 
             .gallery {

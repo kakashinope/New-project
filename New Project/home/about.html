@@ -11,22 +11,31 @@
     <meta property="og:description" content="Сайт, що присвячений нашим авторам та їхній любові до космосу.">
     <meta property="og:image" content="посилання_на_зображення.jpg">
     <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Стилі -->
     <style>
+            @keyframes fadeIn {
+                from {
+                opacity: 0;
+                }
+                to {
+                opacity: 1;
+            }
+            }
+
             body {
-                font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
+                font-family: 'Roboto', sans-serif;
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
-                background-color: #0e0e1a; /* Dark blue background like space */
-                color: #f0f0f0; /* Light text color */
+                background-color: #0e0e1a;
+                color: #f0f0f0;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для сторінки */
             }
 
             nav {
-                background-color: #08080f; /* Darker blue for navigation */
-                color: #fff; /* Light text color */
+                background-color: #08080f;
+                color: #fff;
                 padding: 10px;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для навігації */
             }
 
             nav ul {
@@ -39,12 +48,13 @@
 
             nav a {
                 text-decoration: none;
-                color: #fff; /* Light text color */
+                color: #fff;
             }
 
             h1, p {
                 text-align: center;
                 margin: 20px 0;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для заголовків і параграфів */
             }
 
             .gallery {
@@ -52,26 +62,28 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-top: 20px;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для галереї */
             }
 
             .gallery img {
                 width: 300px;
                 margin: 10px;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
             }
 
             .news {
                 text-align: center;
                 margin-top: 50px;
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для новин */
             }
 
             .news h2 {
-                color: #f0f0f0; /* Light text color */
+                color: #f0f0f0;
             }
 
             .news p {
-                color: #b0b0b0; /* Lighter text color */
+                color: #b0b0b0;
             }
 
             .articles {
@@ -79,17 +91,18 @@
                 max-width: 800px;
                 text-align: left;
                 padding: 20px;
-                background-color: #16162b; /* Darker background for articles */
+                background-color: #16162b;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+                animation: fadeIn 1s ease; /* Додали анімацію затухання для статей */
             }
 
             .articles h2 {
-                color: #f0f0f0; /* Light text color */
+                color: #f0f0f0;
             }
 
             .articles a {
-                color: #007bff; /* Lighter blue for links */
+                color: #007bff;
                 text-decoration: none;
             }
 
@@ -125,12 +138,5 @@
             <!-- Додайте більше статей та посилань -->
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 Ваша Компанія. Усі права захищені.</p>
-        <!-- Додайте футер із посиланнями, копірайтом та іншою інформацією -->
-    </footer>
-
-    <!-- Підключення ваших власних скриптів або скриптів, які покращують взаємодію з користувачем -->
 </body>
 </html>

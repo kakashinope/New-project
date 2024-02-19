@@ -6,69 +6,117 @@
     <title>Космос</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
-            background-color: #0e0e1a; /* Dark blue background like space */
-            color: #f0f0f0; /* Light text color */
-            margin: 0;
-            padding: 0;
-        }
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #0e0e1a;
+                color: #f0f0f0;
+                margin: 0;
+                padding: 0;
+                animation: gradientAnimation 15s ease infinite; /* Додаємо анімацію до тіла */
+            }
 
-        header {
-            color: #f0f0f0; /* Light text color */
-            padding: 10px;
-            text-align: center;
-            background-color: #333; /* Darker background for header */
-        }
+            @keyframes gradientAnimation {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
 
-        nav {
-            background-color: #08080f; /* Darker blue for navigation */
-            color: #f0f0f0; /* Light text color */
-            padding: 10px;
-            text-align: center;
-        }
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #0e0e1a;
+                color: #f0f0f0;
+                margin: 0;
+                padding: 0;
+                animation: gradientAnimation 15s ease infinite; /* Додаємо анімацію до тіла */
+            }
 
-        nav a {
-            color: #f0f0f0; /* Light text color */
-            text-decoration: none;
-            margin: 0 10px;
-        }
+            header {
+                color: #f0f0f0;
+                padding: 10px;
+                text-align: center;
+                background-color: #333;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
 
-        h1 {
-            text-align: center;
-            color: #f0f0f0; /* Light text color */
-        }
+            nav {
+                background-color: #08080f;
+                color: #f0f0f0;
+                padding: 10px;
+                text-align: center;
+            }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+            nav a {
+                color: #f0f0f0;
+                text-decoration: none;
+                margin: 0 10px;
+                transition: color 0.3s ease;
+            }
 
-        p {
-            color: #b0b0b0; /* Lighter text color */
-            clear: both;
-        }
+            nav a:hover {
+                color: #53538f;
+            }
 
-        li {
-            clear: both;
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #16162b; /* Darker background for content */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
-        }
+            h1 {
+                text-align: center;
+                color: #f0f0f0;
+            }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
-            float: left;
-            max-width: 250px; /* Added width constraint */
-        }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            p {
+                color: #b0b0b0;
+                clear: both;
+            }
+
+            li {
+                clear: both;
+                margin-bottom: 20px;
+                padding: 20px;
+                background-color: #16162b;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            li:hover {
+                transform: translateY(-5px);
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+                max-width: 250px;
+                transition: transform 0.3s ease;
+            }
+
+            img:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
+                float: left;
+                max-width: 250px; /* Added width constraint */
+            }
 
     </style>
 </head>
