@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Космос</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <style>
             body {
                 font-family: 'Roboto', sans-serif;
@@ -25,15 +24,6 @@
                 100% {
                     background-position: 0% 50%;
                 }
-            }
-
-            body {
-                font-family: 'Roboto', sans-serif;
-                background-color: #0e0e1a;
-                color: #f0f0f0;
-                margin: 0;
-                padding: 0;
-                animation: gradientAnimation 15s ease infinite; /* Додаємо анімацію до тіла */
             }
 
             header {
@@ -101,22 +91,13 @@
                 box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
                 max-width: 250px;
                 transition: transform 0.3s ease;
+                float: left;
             }
 
             img:hover {
                 transform: scale(1.1);
             }
 
-            img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: 20px auto;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Lighter shadow */
-                float: left;
-                max-width: 250px; /* Added width constraint */
-            }
 
     </style>
 </head>
@@ -130,35 +111,55 @@
     </nav>
     <ul>
         <li>
-            <img src="{{url_for('static',filename='space-galaxy.jpg')}}" alt="Космос" style="float: left; margin-right: 20px;">
-            <p>Про космос:</p>
-            {% for fact in facts %}
+            <img src="{{url_for('static',filename='Leonid_Kadenyuk.jpg')}}" alt="Космос" style="float: left; margin-right: 20px;">
+            <p></p>
+            {% for spaceexplorers in spaceexplorers_list %}
                 <div>
-                    <h3>{{ fact['title'] }}</h3>
-                    <p>{{ fact['description'] }}</p>
+                    <h3>{{ spaceexplorers['name'] }}</h3>
+                    <p>{{ spaceexplorers['birthdate'] }}</p>
+                    <p>{{ spaceexplorers['birthplace'] }}</p>
+                    <p>{{ spaceexplorers['deathdate'] }}</p>
+                    <p>{{ spaceexplorers['deathplace'] }}</p>
+                    <p>{{ spaceexplorers['occupation'] }}</p>
+                    <p>{{ spaceexplorers['military_rank'] }}</p>
+                    <p>{{ spaceexplorers['achievements'] }}</p>
                 </div>
             {% endfor %}
         </li>
         <li>
-            <img src="{{url_for('static',filename='Sun.png')}}" alt="Космос" style="float: left; margin-right: 20px;">
-            <p>Про Зірки:</p>
-            {% for fact in facts2 %}
+            <img src="{{url_for('static',filename='Neil_Armstrong.jpg')}}" alt="Космос" style="float: left; margin-right: 20px;">
+            <p></p>
+            {% for spaceexplorers in spaceexplorers2_list %}
                 <div>
-                    <h3>{{ fact['title'] }}</h3>
-                    <p>{{ fact['description'] }}</p>
+                    <h3>{{ spaceexplorers["name"] }}</h3>
+                    <p>{{ spaceexplorers["birthdate"] }}</p>
+                    <p>{{ spaceexplorers["birthplace"] }}</p>
+                    <p>{{ spaceexplorers["deathdate"] }}</p>
+                    <p>{{ spaceexplorers["occupation"] }}</p>
+                    <p>{{ spaceexplorers["notable_achievements"] }}</p>
                 </div>
             {% endfor %}
         </li>
         <li>
-            <img src="{{url_for('static',filename='Dira.png')}}" alt="Космос" style="float: left; margin-right: 20px;">
-            <p>Про Чорні Діри:</p>
-            {% for fact in facts3 %}
+            <img src="{{url_for('static',filename='lossy-page.jpg')}}" alt="Космос" style="float: left; margin-right: 20px;">
+            <p></p>
+            {% for spaceexplorers in spaceexplorers3_list %}
                 <div>
-                    <h3>{{ fact['title'] }}</h3>
-                    <p>{{ fact['description'] }}</p>
+                    <h3>{{ spaceexplorers["name"] }}</h3>
+                    <p>{{ spaceexplorers["birthdate"] }}</p>
+                    <p>{{ spaceexplorers["deathdate"] }}</p>
+                    <p>{{ spaceexplorers["nationality"] }}</p>
+                    <p>{{ spaceexplorers["occupation"] }}</p>
+                    <p>{{ spaceexplorers["memberships"] }}</p>
+                    <p>{{ spaceexplorers["education"] }}</p>
+                    <p>{{ spaceexplorers["career"] }}</p>
+                    <p>{{ spaceexplorers["research"] }}</p>
+                    <p>{{ spaceexplorers["presidency"] }}</p>
+                    <p>{{ spaceexplorers["awards"] }}</p>
                 </div>
             {% endfor %}
         </li>
     </ul>
 </body>
 </html>
+

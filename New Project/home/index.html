@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Космос</title>
+    <meta property="og:title" content="Космос">
+    <meta property="og:description" content="Досліджуйте та дізнавайтеся цікаві факти про космічний простір. Від галактик до планет, від наукових відкрить до захоплюючих астрономічних явищ - усе тут!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:5000/">
     <style>
             body {
                 font-family: 'Roboto', sans-serif;
@@ -141,27 +145,30 @@
 <body>
     <nav>
         <ul>
-            <a href="http://127.0.0.1:5000/" onclick="showSection('index')">Головна</a>
-            <a href="http://127.0.0.1:5000/facts" onclick="showSection('facts')">Факти про Космос</a>
-            <a href="http://127.0.0.1:5000/gallery" onclick="showSection('gallery')">Галерея</a>
-            <a href="http://127.0.0.1:5000/about" onclick="showSection('about')">Про нас</a>
-        </ul>
-    </nav>
-    <h1>Ласкаво просимо на сайт про космос!</h1>
-    <p>Досліджуйте та дізнавайтеся цікаві факти про космічний простір. Від галактик до планет, від наукових відкрить до захоплюючих астрономічних явищ - усе тут!</p>
-
-    <section id="index">
-        <h2>Головна сторінка</h2>
-        <p>Це головна сторінка сайту про космос. Ви можете вибрати інші розділи зверху.</p>
-        <form id="subscribeForm" onsubmit="submitForm(event)">
-            <h2>Підписатися на новини</h2>
-            <input type="email" id="emailInput" placeholder="Введіть ваш email" required>
-            <button type="submit">Підписатися</button>
-        </form>
-        <p id="confirmation" style="display: none;">Дякуємо за підписку!</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Космос Вебсайт. Усі права захищено.</p>
-    </footer>
-</body>
-</html>
+            <a href="http://127.0.0.1:5000/" onclick="showSection('index.html')">Головна</a>
+            <a href="http://127.0.0.1:5000/facts" onclick="showSection('facts')">Факти про Комос</a>
+            <a href="http://127.0.0.1:5000/space-explorers" onclick="showSection('spaceexplorers')">Досідники</a>
+            <a href="http://127.0.0.1:5000/gallery" onclick="showSection('gallery.html')">Галерея</a>
+            <a href="http://127.0.0.1:5000/about" onclick="showSection('about.html')">Про нас</a>
+        </nav>
+        <h1>Ласкаво просимо на сайт про космос!</h1>
+        <p>Досліджуйте та дізнавайтеся цікаві факти про космічний простір. Від галактик до планет, від наукових відкрить до захоплюючих астрономічних явищ - усе тут!</p>
+    
+        <!-- Блок з цікавим фактом про космос -->
+        <section id="fact">
+            <h2>Цікавий факт про космос</h2>
+            <p>У 1992 році астрономи виявили найбільш віддалену від нас галактику, яку назвали A1689B11. Вона віддалена на 12,8 мільярдів світлових років від Землі!</p>
+        </section>
+    
+        <!-- Блок з галереєю зображень космосу -->
+        <section id="gallery">
+            <h2>Галерея космосу</h2>
+            <div class="gallery">
+                <a href="http://127.0.0.1:5000/gallery/4"><img src="https://searchthisweb.com/wallpaper/thumb1000/main1000_earth_7680x4320_ejea5.jpg" alt="Космос 1"></a>
+                <a href="http://127.0.0.1:5000/gallery/5"><img src="https://images4.alphacoders.com/101/1011715.jpg" alt="Космос 2"></a>
+                <a href="http://127.0.0.1:5000/gallery/6"><img src="https://searchthisweb.com/wallpaper/thumb1000/main1000_mars_3840x2160_jk1uo.jpg" alt="Космос 3"></a>
+                <!-- Додайте інші посилання на зображення за необхідності -->
+            </div>
+        </section>
+    </body>
+    </html>

@@ -110,6 +110,19 @@
                 text-decoration: underline;
             }
 
+            .gallery img {
+                width: 300px; /* Змінюємо ширину зображень на 300px */
+                height: auto; /* Автоматична висота для збереження пропорцій */
+                margin: 10px; /* Додаємо зовнішні відступи */
+                border-radius: 8px; /* Округлюємо кути */
+                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Додаємо тінь */
+                transition: transform 0.3s ease; /* Додаємо плавний ефект при наведенні */
+            }
+
+            .gallery img:hover {
+                transform: scale(1.1); /* Збільшуємо зображення при наведенні */
+            }
+
     </style>
 </head>
 <body>
@@ -118,8 +131,9 @@
             <ul>
                 <a href="http://127.0.0.1:5000/" onclick="showSection('index.html')">Головна</a>
                 <a href="http://127.0.0.1:5000/facts" onclick="showSection('facts')">Факти про Комос</a>
+                <a href="http://127.0.0.1:5000/space-explorers" onclick="showSection('spaceexplorers')">Досідники</a>
                 <a href="http://127.0.0.1:5000/gallery" onclick="showSection('gallery.html')">Галерея</a>
-                <a href="http://127.0.0.1:5000/about" onclick="showSection('abou.html')">Про нас</a>
+                <a href="http://127.0.0.1:5000/about" onclick="showSection('about.html')">Про нас</a>
             </ul>
         </nav>
         <h1>Про нас</h1>
@@ -128,7 +142,15 @@
     <section>
         <p>Інформація про авторів сайту та їхню любов до космосу.</p>
         <!-- Додайте більше інформації про авторів, можливо, фотографії та посилання на їх соціальні мережі -->
-    </section>
+        <section id="gallery">
+            <h2 style="text-align: center;">Галерея космосу</h2>
+            <div class="gallery">
+                <a href="http://127.0.0.1:5000/gallery/4"><img src="https://searchthisweb.com/wallpaper/thumb1000/main1000_earth_7680x4320_ejea5.jpg" alt="Космос 1"></a>
+                <a href="http://127.0.0.1:5000/gallery/5"><img src="https://images4.alphacoders.com/101/1011715.jpg" alt="Космос 2"></a>
+                <a href="http://127.0.0.1:5000/gallery/6"><img src="https://searchthisweb.com/wallpaper/thumb1000/main1000_mars_3840x2160_jk1uo.jpg" alt="Космос 3"></a>
+                <!-- Додайте інші посилання на зображення за необхідності -->
+            </div>
+        </section>
     <section class="articles">
         <h2>Найцікавіші статті</h2>
         <div>
