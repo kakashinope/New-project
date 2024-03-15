@@ -14,27 +14,45 @@
                 }
             }
 
+            @keyframes slideInFromLeft {
+                from {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
             body {
                 font-family: 'Roboto', sans-serif;
                 color: #f0f0f0;
                 margin: 0;
                 padding: 0;
                 background-color: #0e0e1a;
-                animation: fadeIn 1s ease; /* Додали анімацію затухання для сторінки */
+                animation: fadeIn 1s ease;
             }
 
-            header {
-                padding: 10px;
-                text-align: center;
-                background-color: #08080f;
-                animation: fadeIn 1s ease; /* Додали анімацію затухання для заголовка */
+            header,
+            nav,
+            h1,
+            p,
+            .container,
+            img,
+            .comment-section,
+            .comment,
+            .comment-form,
+            .comment-form textarea,
+            .comment-form button {
+                animation: fadeIn 1s ease;
             }
 
+            header,
             nav {
                 padding: 10px;
                 text-align: center;
                 background-color: #08080f;
-                animation: fadeIn 1s ease; /* Додали анімацію затухання для навігації */
             }
 
             nav a {
@@ -46,7 +64,6 @@
             h1 {
                 text-align: center;
                 color: #0066cc;
-                animation: fadeIn 1s ease; /* Додали анімацію затухання для заголовка h1 */
             }
 
             ul {
@@ -60,7 +77,6 @@
                 clear: both;
                 line-height: 1.6;
                 margin-bottom: 15px;
-                animation: fadeIn 1s ease; /* Додали анімацію затухання для параграфів */
             }
 
             li {
@@ -79,14 +95,7 @@
                 margin: 20px auto;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
-                float: left;
                 max-width: 400px;
-                animation: fadeIn 1s ease; /* Додали анімацію затухання для зображень */
-            }
-
-            .description-input {
-                clear: both;
-                margin-top: 10px;
             }
 
             .description-input textarea {
@@ -105,9 +114,54 @@
                 padding: 20px;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
-                animation: fadeIn 1s ease; /* Додали анімацію затухання для контейнера */
             }
 
+            .comment-section {
+                margin-top: 20px;
+            }
+
+            .comment-section h2 {
+                color: #11112b;
+            }
+
+            .comments {
+                margin-top: 10px;
+            }
+
+            .comment {
+                background-color: #f9f9f9;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            .comment p {
+                margin: 0;
+            }
+
+            .comment-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                border-radius: 8px;
+                border: 1px solid #ccc;
+                resize: vertical;
+            }
+
+            .comment-form button {
+                background-color: #0066cc;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 8px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            .comment-form button:hover {
+                background-color: #005bb5;
+            }
 
     </style>
 </head>
@@ -121,11 +175,14 @@
         <img src="{{ item[1] }}" alt="Image">
         <div class="description">
             <p>{{ item[3] }}</p>
-        </div>
-        <div class="description-input">
-            <label for="image-description"></label><br>
-            <textarea id="image-description" rows="4" cols="50"></textarea>
-        </div>
+        <div class="comment-section">
+            <h2>Коментарі</h2>
+            <div class="comments">
+                <!-- Коментарі будуть відображатися тут -->
+            </div>
+                <textarea name="comment" id="comment-text" placeholder="Напишіть коментар"></textarea>
+                <button type="submit">Додати коментар</button>
+            </form>     
     </div>
 </body>
 </html>

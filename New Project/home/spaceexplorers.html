@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Космос</title>
     <style>
+            /* Загальні стилі */
             body {
                 font-family: 'Roboto', sans-serif;
                 background-color: #0e0e1a;
@@ -14,6 +15,7 @@
                 animation: gradientAnimation 15s ease infinite; /* Додаємо анімацію до тіла */
             }
 
+            /* Анімація градієнта */
             @keyframes gradientAnimation {
                 0% {
                     background-position: 0% 50%;
@@ -26,6 +28,7 @@
                 }
             }
 
+            /* Стилі для заголовка */
             header {
                 color: #f0f0f0;
                 padding: 10px;
@@ -34,6 +37,7 @@
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             }
 
+            /* Стилі для навігації */
             nav {
                 background-color: #08080f;
                 color: #f0f0f0;
@@ -52,22 +56,26 @@
                 color: #53538f;
             }
 
+            /* Стилі для заголовка h1 */
             h1 {
                 text-align: center;
                 color: #f0f0f0;
             }
 
+            /* Стилі для списку ul */
             ul {
                 list-style-type: none;
                 padding: 0;
                 margin: 0;
             }
 
+            /* Стилі для параграфів p */
             p {
                 color: #b0b0b0;
                 clear: both;
             }
 
+            /* Стилі для пунктів списку li */
             li {
                 clear: both;
                 margin-bottom: 20px;
@@ -82,6 +90,7 @@
                 transform: translateY(-5px);
             }
 
+            /* Стилі для зображень img */
             img {
                 max-width: 100%;
                 height: auto;
@@ -98,7 +107,15 @@
                 transform: scale(1.1);
             }
 
-
+            /* 3D текст */
+            .three-d-text {
+                font-size: 48px; /* Розмір тексту */
+                font-family: 'Roboto', sans-serif; /* Шрифт тексту */
+                color: #ffffff; /* Колір тексту */
+                text-transform: uppercase; /* Приведення тексту до верхнього регістру */
+                text-shadow: 4px 4px 0px rgba(0,0,0,0.1); /* Тінь тексту */
+                transform: perspective(300px) rotateY(20deg); /* Перспектива та обертання тексту */
+            }
     </style>
 </head>
 <body>

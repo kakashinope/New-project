@@ -16,18 +16,22 @@
                 }
             }
 
-            h1,
-            h2,
-            p {
-                animation: fadeIn 0.5s ease-in-out; /* Додали анімацію для заголовків та параграфів */
+            @keyframes slideInFromLeft {
+                from {
+                    transform: translateX(-100%);
+                }
+                to {
+                    transform: translateX(0);
+                }
             }
 
             body {
                 font-family: 'Roboto', sans-serif;
-                background-color: #0e0e1a;
+                background: linear-gradient(to right, #0e0e1a, #08080f); /* Переливаний фон */
                 color: #f0f0f0;
                 margin: 0;
                 padding: 0;
+                animation: fadeIn 1s ease-in-out; /* Додали анімацію для всього вмісту */
             }
 
             header,
@@ -36,6 +40,7 @@
                 color: #f0f0f0;
                 padding: 10px;
                 text-align: center;
+                animation: slideInFromLeft 1s ease-out; /* Додали анімацію для заголовків і навігації */
             }
 
             nav a {
@@ -47,6 +52,9 @@
             h1 {
                 text-align: center;
                 color: #f0f0f0;
+                /* Косі текст */
+                transform: skewY(-5deg);
+                animation: slideInFromLeft 1s ease-out; /* Додали анімацію для заголовка */
             }
 
             ul {
@@ -58,6 +66,9 @@
             p {
                 color: #b0b0b0;
                 clear: both;
+                /* Косі текст */
+                transform: skewX(-5deg);
+                animation: slideInFromLeft 1s ease-out; /* Додали анімацію для параграфа */
             }
 
             li {
@@ -67,6 +78,9 @@
                 background-color: #16162b;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+                /* 3D ефект */
+                transform: perspective(100px) rotateX(5deg);
+                animation: rotateIn 2s linear infinite; /* Додали анімацію обертання */
             }
 
             img {

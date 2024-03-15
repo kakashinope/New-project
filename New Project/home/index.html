@@ -10,134 +10,165 @@
     <meta property="og:url" content="http://127.0.0.1:5000/">
     <style>
             body {
-                font-family: 'Roboto', sans-serif;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                color: #f0f0f0;
-                background: linear-gradient(45deg, #000033, #000066, #000033, #000066);
-                background-size: 400% 400%;
-                animation: gradientAnimation 15s ease infinite;
-            }
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #f0f0f0;
+            background: linear-gradient(45deg, #000033, #000066, #000033, #000066);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
 
-            @keyframes gradientAnimation {
-                0% {
-                    background-position: 0% 50%;
-                }
-                50% {
-                    background-position: 100% 50%;
-                }
-                100% {
-                    background-position: 0% 50%;
-                }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
             }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-            nav {
-                background-color: #08080f;
-                color: #f0f0f0;
-                padding: 10px;
-            }
+        nav {
+            background-color: #08080f;
+            color: #f0f0f0;
+            padding: 10px;
+        }
 
-            nav ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: space-around;
-            }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
 
-            nav a {
-                text-decoration: none;
-                color: #f0f0f0;
-                transition: color 0.3s ease;
-            }
+        nav a {
+            text-decoration: none;
+            color: #f0f0f0;
+            transition: color 0.3s ease;
+        }
 
-            nav a:hover {
-                color: #53538f;
-            }
+        nav a:hover {
+            color: #53538f;
+        }
 
-            h1, h2, p {
-                text-align: center;
-                margin: 20px 0;
-                color: #f0f0f0; /* Змінимо колір тексту заголовків і параграфів */
-            }
+        h1, h2, p {
+            text-align: center;
+            margin: 20px 0;
+            color: #f0f0f0;
+        }
 
-            section {
-                padding: 20px;
-                background-color: rgba(22, 22, 43, 0.8);
-                border-radius: 8px;
-                margin: 20px;
-                box-shadow: 0 0 20px rgba(240, 240, 240, 0.1); /* Додамо тінь для ефекту глибини */
-            }
+        p {
+            font-style: italic;
+        }
 
-            section h2 {
-                color: #f0f0f0;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Додамо тінь для заголовків */
-            }
+        h1, h2 {
+            text-transform: uppercase;
+            position: relative;
+        }
 
-            section ul {
-                list-style-type: disc;
-                padding-left: 20px;
-            }
+        h1:before, h2:before {
+            content: attr(data-text);
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            color: #000;
+            z-index: -1;
+        }
 
-            .gallery {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                grid-gap: 20px;
-            }
+        h1:after, h2:after {
+            content: attr(data-text);
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            color: #000;
+            z-index: -1;
+        }
 
-            .gallery img {
-                width: 100%;
-                border-radius: 8px;
-                margin-bottom: 10px;
-                transition: transform 0.3s ease, border-radius 0.3s ease;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.3); /* Додамо тінь для зображень */
-            }
+        h1:before, h1:after, h2:before, h2:after {
+            text-shadow: -1px -1px 1px rgba(255,255,255,0.3), 1px 1px 1px rgba(0,0,0,0.8);
+        }
 
-            .gallery img:hover {
-                transform: scale(1.1);
-                border-radius: 12px;
-            }
+        section {
+            padding: 20px;
+            background-color: rgba(22, 22, 43, 0.8);
+            border-radius: 8px;
+            margin: 20px;
+            box-shadow: 0 0 20px rgba(240, 240, 240, 0.1);
+        }
 
-            form {
-                max-width: 400px;
-                margin: 0 auto;
-                background-color: rgba(22, 22, 43, 0.8);
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
-            }
+        section h2 {
+            color: #f0f0f0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-            input, button {
-                margin-bottom: 10px;
-                width: 100%;
-                padding: 10px;
-                box-sizing: border-box;
-                border: 1px solid #53538f;
-                border-radius: 4px;
-                background-color: rgba(14, 14, 26, 0.9);
-                color: #f0f0f0;
-            }
+        section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
 
-            button {
-                background-color: #53538f;
-                cursor: pointer;
-                transition: transform 0.3s ease;
-            }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
 
-            button:hover {
-                transform: scale(1.05);
-            }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, border-radius 0.3s ease;
+            box-shadow: 0 0 10px rgba(240, 240, 240, 0.3);
+        }
 
-            footer {
-                background-color: #08080f;
-                color: #f0f0f0;
-                text-align: center;
-                padding: 10px;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
+        .gallery img:hover {
+            transform: scale(1.1);
+            border-radius: 12px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: rgba(22, 22, 43, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+        }
+
+        input, button {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #53538f;
+            border-radius: 4px;
+            background-color: rgba(14, 14, 26, 0.9);
+            color: #f0f0f0;
+        }
+
+        button {
+            background-color: #53538f;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #08080f;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
 
     </style>
 </head>

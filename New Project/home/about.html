@@ -14,11 +14,11 @@
     <style>
             @keyframes fadeIn {
                 from {
-                opacity: 0;
+                    opacity: 0;
                 }
                 to {
-                opacity: 1;
-            }
+                    opacity: 1;
+                }
             }
 
             body {
@@ -70,6 +70,7 @@
                 margin: 10px;
                 border-radius: 8px;
                 box-shadow: 0 0 10px rgba(240, 240, 240, 0.1);
+                transition: transform 0.3s ease; /* Додаємо плавний ефект при наведенні */
             }
 
             .news {
@@ -110,19 +111,9 @@
                 text-decoration: underline;
             }
 
-            .gallery img {
-                width: 300px; /* Змінюємо ширину зображень на 300px */
-                height: auto; /* Автоматична висота для збереження пропорцій */
-                margin: 10px; /* Додаємо зовнішні відступи */
-                border-radius: 8px; /* Округлюємо кути */
-                box-shadow: 0 0 10px rgba(240, 240, 240, 0.1); /* Додаємо тінь */
-                transition: transform 0.3s ease; /* Додаємо плавний ефект при наведенні */
-            }
-
             .gallery img:hover {
                 transform: scale(1.1); /* Збільшуємо зображення при наведенні */
             }
-
     </style>
 </head>
 <body>
